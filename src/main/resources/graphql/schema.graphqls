@@ -1,0 +1,25 @@
+# Consulta
+type Query {
+    # Retorna todos os usuários
+    allPerson: [Person!]!
+    # Retorna um usuário pelo ID
+    allPersonPaged(page: Int, size: Int): [Person]
+}
+
+#Tipos de Objetos
+type Person {
+    id: ID!,
+    firstName: String,
+    lastName: String,
+    phoneNumber: String
+    email: String,
+    address: Address!
+}
+
+type Address {
+    id: ID!,
+    address: String,
+    city: String,
+    state: String,
+    zipCode: String
+}
